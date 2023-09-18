@@ -27,10 +27,10 @@ services:
       - example-network
     tty: true
 
-  api:
+  server:
     build:
       context: ../
-      dockerfile: ./.docker/Dockerfile
+      dockerfile: ./.docker/Dockerfile.dev
     image: throyer/example/dev:latest
     container_name: example-api
     links:
